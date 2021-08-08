@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    #search {
+      border-radius: 30px;
+      padding-top: 50px;
+      padding-right: 30px;
+      padding-bottom: 50px;
+      padding-left: 80px;
+    }
+    #submit {
+      
+      padding-top: 50px;
+      padding-right: 30px;
+      padding-bottom: 50px;
+      padding-left: 80px;
+    }
+  </style>
+
+  <form action="" method="post" autocomplete="off">
+    {% csrf_token %}
+    <input method="post" type="text" name="stateResult" id="search" list="stateList" placeholder="Activity" class="form-control">
+    <datalist id="stateList">
+        
+            <option value="Sports">
+        
+            </option><option value="Public Speaking">
+        
+            </option><option value="STEM">
+        
+            </option><option value="Summer Camps">
+        
+            </option><option value="Tutoring">
+        
+    </option></datalist>
+    <input type="submit" value="Submit" id="submit">
+  </form>
+  
+</body>
+</html>
