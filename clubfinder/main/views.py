@@ -11,9 +11,9 @@ def index(response):
         activity = response.POST.getlist('activityResult')[0]
         if activity == 'Business / Finance':
 
-            q = Business.objects.all()
+            business_list = list(Business.objects.all())
             # q = Business.objects.filter(name='JA Southern Alberta')[0].name
-            print(q)
+            print(business_list)
 
 
     return render(response, 'main/index.html', {})
