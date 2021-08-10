@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Finder | Map</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 4rem;
+            height: 100vh;
+        }
+        #map{
+            height: 100%;
+            width: 70%;
+            border-radius: 30px;
+            margin: 0px auto;
+            
+        }
+    </style>
+    <h1>{{activity}}</h1>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var options = {
+                zoom: 11,
+                center: {lat: 51.0489397, lng: -114.0855771}
+            }
+
+            var map = new google.maps.Map(document.getElementById("map"), options);
+        }
+    </script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN9KMFL5lLxXckJPe_9hdRUVd431tMANI&callback=initMap&libraries=&v=weekly">
+    </script>
+</body>
+</html>

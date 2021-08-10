@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Club Finder | Home</title>
 </head>
 <body>
 <h1> Club Finder </h1>
@@ -49,7 +49,7 @@ body{
 
 .searchButton {
   width: 40px;
-  height: 32px;
+  height: 36px;
   border: 1px solid #00B4CC;
   background: #00B4CC;
   text-align: center;
@@ -74,16 +74,17 @@ body{
 }
   </style>
   <form action="" method="post" autocomplete="off">
+  {% csrf_token %}
   <div class="wrap">
    <div class="search">
       <input method="post" type="text" name="activityResult" id="searchS" class="searchTerm" list="activityList" placeholder="What activity are you looking for?">
       <datalist id="activityList">
         
-            </option><option value="Business / Finance">
+            <option value="Business / Finance">
         
             </option><option value="Public Speaking">
 
-            <option value="Sports">
+            </option><option value="Sports">
         
             </option><option value="STEM">
         
@@ -92,12 +93,16 @@ body{
             </option><option value="Tutoring">
 
             </option><option value="Youth Employment/Volunteering">
+
+            </option>
         
     </option></datalist>
-      <input place="submit" class="searchButton" placeholder="Go">
-        <i class="fa fa-search"></i>
-     </input>
-   </div>
+    <!-- <input type="submit" value="submit" id='submit'> -->
+
+    
+    <input type='submit' id='submit' class="searchButton" value="Go"></input>
+  
+  </div>
 </div>
 </form>
   
