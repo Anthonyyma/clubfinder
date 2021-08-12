@@ -7,6 +7,7 @@ The project is a Django web application app that displays results of extra curri
 * [Django](https://www.djangoproject.com/)
 * [HTML/CSS](https://html.com/) 
 * [Javascript](https://www.javascript.com/)
+* [Microsoft Azure](https://azure.microsoft.com/en-ca/)
 
 ## Installation
  ```sh
