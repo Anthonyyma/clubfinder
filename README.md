@@ -1,6 +1,6 @@
 # Club Finder: Find clubs in your area
 ## About 
-The project is a Django web application app using HTML/CSS for the front end and Python for the backend
+The project is a Django web application app that displays results of extra curriculars in the area, based on the category searched
 
 ## Built With
 * [Python](https://www.python.org/)
