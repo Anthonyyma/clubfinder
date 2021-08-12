@@ -72,12 +72,26 @@ def map(response):
     if activity == 'Business / Finance':
         desc = Business.objects.filter(name=name)[0].description
         adr = Business.objects.filter(name=name)[0].address
-    print('essef')
-    print('essef')
-    print('essf')
-    print(adr)
-    location = geolocator.geocode('105 12 Ave SE, Calgary, AB T2G 1A1')
-    print(location.latitude)
+    if activity == 'Public Speaking':
+        desc = PublicSpeaking.objects.filter(name=name)[0].description
+        adr = PublicSpeaking.objects.filter(name=name)[0].address
+    if activity == 'Sports':
+        desc = Sports.objects.filter(name=name)[0].description
+        adr = Sports.objects.filter(name=name)[0].address
+    if activity == 'STEM':
+        desc = STEM.objects.filter(name=name)[0].description
+        adr = STEM.objects.filter(name=name)[0].address
+    if activity == 'Summer Camps and Programs':
+        desc = SummerCamps.objects.filter(name=name)[0].description
+        adr = SummerCamps.objects.filter(name=name)[0].address
+    if activity == 'Tutoring':
+        desc = Tutoring.objects.filter(name=name)[0].description
+        adr = Tutoring.objects.filter(name=name)[0].address
+    if activity == 'Youth Employment/Volunteering':
+        desc = YouthEmployment.objects.filter(name=name)[0].description
+        adr = YouthEmployment.objects.filter(name=name)[0].address
+
+    location = geolocator.geocode(adr)
 
     # print(adr)
     # print(location)
