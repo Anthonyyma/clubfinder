@@ -63,36 +63,22 @@ def index(response):
 
 def map(response):
     adr = ''
+    desc = ''
+    location = ''
     name = response.GET.get('name')
+
+    geolocator = Nominatim(user_agent="convert_to_coords")
 
     if activity == 'Business / Finance':
         desc = Business.objects.filter(name=name)[0].description
         adr = Business.objects.filter(name=name)[0].address
-    if activity == 'Public Speaking':
-        desc = PublicSpeaking.objects.filter(name=name)[0].description
-        adr = PublicSpeaking.objects.filter(name=name)[0].address
-    if activity == 'Sports':
-        desc = Sports.objects.filter(name=name)[0].description
-        adr = Sports.objects.filter(name=name)[0].address
-    if activity == 'STEM':
-        desc = STEM.objects.filter(name=name)[0].description
-        adr = STEM.objects.filter(name=name)[0].address
-    if activity == 'Summer Camps and Programs':
-        desc = SummerCamps.objects.filter(name=name)[0].description
-        adr = SummerCamps.objects.filter(name=name)[0].address
-    if activity == 'Tutoring':
-        desc = Tutoring.objects.filter(name=name)[0].description
-        adr = Tutoring.objects.filter(name=name)[0].address
-    if activity == 'Youth Employment/Volunteering':
-        desc = YouthEmployment.objects.filter(name=name)[0].description
-        adr = YouthEmployment.objects.filter(name=name)[0].address
-
-
-    geolocator = Nominatim(user_agent="convert_to_coords")
-
+    print('essef')
+    print('essef')
+    print('essf')
     print(adr)
+    location = geolocator.geocode('105 12 Ave SE, Calgary, AB T2G 1A1')
+    print(location.latitude)
 
-    location = geolocator.geocode(adr)
     # print(adr)
     # print(location)
     # print(location.latitude)
