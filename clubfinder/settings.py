@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-0po(26)@l=hhu*ofw9pxhpts(=cqf-$@beqpbjsle-u6_#nv$#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://clubfinder.azurewebsites.net/']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -127,7 +127,6 @@ STATIC_URL = '/static/'
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
-    '/var/www/static/',
 )
 
 # Default primary key field type
