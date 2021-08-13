@@ -8,6 +8,11 @@
 </head>
 <body>
     <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        h1 {
+            text-align: center;
+        }
         body{
             margin: 4rem;
             height: 100vh;
@@ -19,6 +24,7 @@
             margin: 0px auto;
             
         }
+        
     </style>
     <h1>{{name}}</h1>
     <div id="map"></div>
@@ -37,7 +43,7 @@
             })
 
             var infoWindow = new google.maps.InfoWindow({
-                content: '{{name}} <br> {{desc}}'
+                content: '{{name}} <br> {{desc}} <br> {{adr}}'
             });
 
             marker.addListener('click', function() {
